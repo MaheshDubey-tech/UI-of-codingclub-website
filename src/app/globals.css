@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF8F3;
+  --foreground: #1F2937;
+  --card: #FFFFFF;
+  --card-foreground: #1F2937;
+  --primary: #1F6B57;
+  --primary-foreground: #FFFFFF;
+  --secondary: #4A90E2;
+  --secondary-foreground: #FFFFFF;
+  --accent: #F4A261;
+  --accent-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --ring: #1F6B57;
+  --muted: #6B7280;
+  --muted-foreground: #4B5563;
+}
+
+:root.dark {
+  --background: #08131F;
+  --foreground: #F3F4F6;
+  --card: #0F172A;
+  --card-foreground: #F3F4F6;
+  --primary: #1F6B57;
+  --primary-foreground: #FFFFFF;
+  --secondary: #4A90E2;
+  --secondary-foreground: #FFFFFF;
+  --accent: #F4A261;
+  --accent-foreground: #FFFFFF;
+  --border: #1E293B;
+  --ring: #1F6B57;
+  --muted: #9CA3AF;
+  --muted-foreground: #D1D5DB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --radius-xl: 12px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom Scrollbar for compact dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
