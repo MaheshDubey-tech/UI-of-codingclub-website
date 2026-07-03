@@ -20,68 +20,7 @@ export default function Resources() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const [resources, setResources] = useState<Resource[]>([
-    {
-      id: 1,
-      title: "React.js Developer Roadmap",
-      category: "Frontend",
-      difficulty: "Beginner",
-      readTime: "15 min read",
-      downloadCount: 124,
-      format: "PDF",
-      saved: true
-    },
-    {
-      id: 2,
-      title: "Data Structures & Algorithms Cheat Sheet",
-      category: "Core CS",
-      difficulty: "Intermediate",
-      readTime: "25 min read",
-      downloadCount: 350,
-      format: "PDF",
-      saved: false
-    },
-    {
-      id: 3,
-      title: "System Design Foundations & Examples",
-      category: "Backend",
-      difficulty: "Advanced",
-      readTime: "45 min read",
-      downloadCount: 89,
-      format: "Video",
-      saved: false
-    },
-    {
-      id: 4,
-      title: "Docker & Kubernetes Deployment Handbook",
-      category: "DevOps",
-      difficulty: "Intermediate",
-      readTime: "30 min read",
-      downloadCount: 112,
-      format: "Code Repo",
-      saved: false
-    },
-    {
-      id: 5,
-      title: "Machine Learning with Python & NumPy",
-      category: "Data Science",
-      difficulty: "Intermediate",
-      readTime: "40 min read",
-      downloadCount: 94,
-      format: "PDF",
-      saved: false
-    },
-    {
-      id: 6,
-      title: "Advanced Git, Merging & Rebase Guide",
-      category: "DevOps",
-      difficulty: "Beginner",
-      readTime: "12 min read",
-      downloadCount: 205,
-      format: "PDF",
-      saved: true
-    }
-  ]);
+  const [resources, setResources] = useState<Resource[]>([]);
 
   const categories = ["All", "Frontend", "Backend", "Data Science", "DevOps", "Core CS"];
 

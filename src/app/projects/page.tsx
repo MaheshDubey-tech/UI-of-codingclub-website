@@ -28,68 +28,7 @@ export default function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTech, setSelectedTech] = useState<string>("All");
   
-  const [projects, setProjects] = useState<Project[]>([
-    {
-      id: 1,
-      name: "CodeConnect",
-      description: "A social networking platform designed specifically for developers to showcase work and find collaborators.",
-      techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Supabase"],
-      teamSize: 3,
-      maxTeamSize: 5,
-      progress: 75,
-      githubUrl: "https://github.com",
-      status: "open",
-      joined: false
-    },
-    {
-      id: 2,
-      name: "DevFinder",
-      description: "Mobile app using React Native that helps students locate team members within the same university campus.",
-      techStack: ["React Native", "Expo", "Node.js", "MongoDB"],
-      teamSize: 2,
-      maxTeamSize: 4,
-      progress: 40,
-      githubUrl: "https://github.com",
-      status: "open",
-      joined: false
-    },
-    {
-      id: 3,
-      name: "AlgoVisualizer",
-      description: "Interactive web dashboard visualizing classic search, sort, and graph traversal algorithms in real-time.",
-      techStack: ["React", "TypeScript", "Framer Motion"],
-      teamSize: 1,
-      maxTeamSize: 2,
-      progress: 90,
-      githubUrl: "https://github.com",
-      status: "open",
-      joined: true
-    },
-    {
-      id: 4,
-      name: "StudySync",
-      description: "Collaborative note-taking and real-time quiz application powered by web sockets and editor blocks.",
-      techStack: ["Next.js", "PostgreSQL", "Socket.io", "TypeScript"],
-      teamSize: 1,
-      maxTeamSize: 6,
-      progress: 15,
-      githubUrl: "https://github.com",
-      status: "open",
-      joined: false
-    },
-    {
-      id: 5,
-      name: "EcoTrack",
-      description: "Carbon footprint calculator API and extension tracking web browsing and carbon impacts.",
-      techStack: ["Python", "Flask", "Tailwind CSS", "React"],
-      teamSize: 4,
-      maxTeamSize: 4,
-      progress: 100,
-      githubUrl: "https://github.com",
-      status: "completed",
-      joined: false
-    }
-  ]);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   const allTechStacks = ["All", "Next.js", "React Native", "TypeScript", "Tailwind CSS", "Python"];
 

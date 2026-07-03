@@ -23,37 +23,15 @@ import { useTheme } from "@/components/ThemeContext";
 export default function Dashboard() {
   const { role } = useTheme();
 
-  const stats = [
-    { name: "Projects", value: "24", label: "Active Projects", color: "text-[#1F6B57]", bg: "bg-[#1F6B57]/10", icon: Layers },
-    { name: "Teams Joined", value: "5", label: "Collaborations", color: "text-[#4A90E2]", bg: "bg-[#4A90E2]/10", icon: Users },
-    { name: "Resources", value: "48", label: "Saved Resources", color: "text-[#F4A261]", bg: "bg-[#F4A261]/10", icon: BookOpen },
-    { name: "Discussions", value: "32", label: "Replies & Threads", color: "text-purple-500", bg: "bg-purple-500/10", icon: MessageSquare },
-  ];
+  const stats = [];
 
-  const [events, setEvents] = useState([
-    { id: 1, month: "JUN", day: "30", title: "Web Dev Workshop", description: "Build real-world projects", time: "3:00 PM - Online" },
-    { id: 2, month: "JUL", day: "05", title: "DSA Study Jam", description: "Solve, Learn, and Grow", time: "6:00 PM - Online" },
-    { id: 3, month: "JUL", day: "12", title: "Hackathon 2026", description: "Code. Innovate. Impact.", time: "10:00 AM - Offline" },
-  ]);
+  const [events, setEvents] = useState([]);
 
-  const [announcements, setAnnouncements] = useState([
-    { id: 1, title: "New MERN Stack Workshop Added!", desc: "Hands-on session on building full stack apps.", time: "2h ago", iconColor: "bg-blue-500" },
-    { id: 2, title: "Codeathon Registration Open", desc: "Form your team and register now.", time: "5h ago", iconColor: "bg-orange-500" },
-    { id: 3, title: "UI/UX Design Session", desc: "Learn to design intuitive interfaces.", time: "1d ago", iconColor: "bg-emerald-500" },
-  ]);
+  const [announcements, setAnnouncements] = useState([]);
 
-  const activities = [
-    { id: 1, text: "You commented on a discussion", time: "2h ago" },
-    { id: 2, text: "You joined the team 'Dev Wizards'", time: "5h ago" },
-    { id: 3, text: "New resource 'System Design Basics' added", time: "1d ago" },
-    { id: 4, text: "Project 'CodeConnect' updated", time: "2d ago" },
-  ];
+  const activities = [];
 
-  const resources = [
-    { id: 1, title: "React.js Roadmap", type: "PDF • 1.2 MB" },
-    { id: 2, title: "DSA Cheat Sheet", type: "PDF • 450 KB" },
-    { id: 3, title: "Git & GitHub Guide", type: "PDF • 980 KB" },
-  ];
+  const resources = [];
 
   const handleAddEvent = () => {
     const title = prompt("Enter Event Title:");
@@ -104,9 +82,9 @@ export default function Dashboard() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-2xl border border-border bg-card">
         <div>
           <h2 className="text-2xl font-bold text-foreground tracking-tight flex items-center gap-2">
-            Welcome back, Mahesh! 👋
+            Welcome back, User! 👋
           </h2>
-          <p className="text-xs text-muted font-medium mt-1">Let's learn, build and make an impact together.</p>
+          <p className="text-xs text-muted font-medium mt-1">Let&apos;s learn, build and make an impact together.</p>
         </div>
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-border bg-background text-xs font-semibold text-accent">
@@ -226,12 +204,12 @@ export default function Dashboard() {
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <span className="text-[10px] font-bold text-secondary uppercase tracking-wider">Active Course</span>
-                <h4 className="text-xs font-bold text-foreground mt-0.5">Introduction to Next.js & Server Components</h4>
+                <h4 className="text-xs font-bold text-foreground mt-0.5">[Course Title]</h4>
                 <div className="flex items-center gap-2 mt-2">
                   <div className="w-full bg-border h-1.5 rounded-full overflow-hidden">
-                    <div className="bg-secondary h-full rounded-full" style={{ width: "65%" }} />
+                    <div className="bg-secondary h-full rounded-full" style={{ width: "[PROGRESS_VALUE]%" }} />
                   </div>
-                  <span className="text-[10px] font-bold text-foreground flex-shrink-0">65%</span>
+                  <span className="text-[10px] font-bold text-foreground flex-shrink-0">[PROGRESS]%</span>
                 </div>
               </div>
               <button className="flex items-center gap-1 h-8 rounded-lg bg-primary px-3 text-[10px] font-bold text-primary-foreground hover:opacity-95 transition-opacity mt-2 sm:mt-0">

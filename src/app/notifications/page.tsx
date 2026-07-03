@@ -13,40 +13,7 @@ interface Notification {
 }
 
 export default function Notifications() {
-  const [notifications, setNotifications] = useState<Notification[]>([
-    {
-      id: 1,
-      type: "comment",
-      title: "New reply on your discussion",
-      body: "Rahul Krishnan replied to your thread 'How to manage state in Next.js 15 Server Actions?'.",
-      time: "2h ago",
-      read: false
-    },
-    {
-      id: 2,
-      type: "team",
-      title: "Team request approved",
-      body: "Your request to join the project team 'Dev Wizards' was approved.",
-      time: "5h ago",
-      read: false
-    },
-    {
-      id: 3,
-      type: "event",
-      title: "Upcoming event reminder",
-      body: "The Web Dev Workshop will start tomorrow at 3:00 PM Online. Make sure to RSVP.",
-      time: "1d ago",
-      read: true
-    },
-    {
-      id: 4,
-      type: "system",
-      title: "Welcome to Code Nexus!",
-      body: "Thank you for joining our coding club community portal. Get started by updating your profile.",
-      time: "3d ago",
-      read: true
-    }
-  ]);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const handleMarkAsRead = (id: number) => {
     setNotifications(prev => prev.map(n => n.id === id ? { ...n, read: true } : n));

@@ -24,63 +24,7 @@ export default function Discussions() {
   const [newPostTags, setNewPostTags] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const [discussions, setDiscussions] = useState<Discussion[]>([
-    {
-      id: 1,
-      title: "How to manage state in Next.js 15 Server Actions?",
-      author: "Rahul Krishnan",
-      authorInitials: "RK",
-      tags: ["Next.js", "React"],
-      replies: 8,
-      upvotes: 24,
-      time: "2 hours ago",
-      upvoted: false
-    },
-    {
-      id: 2,
-      title: "Best resources to learn System Design for high-throughput backends?",
-      author: "Aditi Rao",
-      authorInitials: "AR",
-      tags: ["System Design", "Backend"],
-      replies: 5,
-      upvotes: 18,
-      time: "5 hours ago",
-      upvoted: true
-    },
-    {
-      id: 3,
-      title: "Codeathon 2026: Team registration guidelines and rules",
-      author: "Club Admin",
-      authorInitials: "CA",
-      tags: ["Announcements", "Events"],
-      replies: 12,
-      upvotes: 42,
-      time: "Yesterday",
-      upvoted: false
-    },
-    {
-      id: 4,
-      title: "Docker vs Podman: What are you running locally in 2026?",
-      author: "Siddharth Sen",
-      authorInitials: "SS",
-      tags: ["DevOps", "Containers"],
-      replies: 14,
-      upvotes: 32,
-      time: "2 days ago",
-      upvoted: false
-    },
-    {
-      id: 5,
-      title: "Google Summer of Code (GSoC) 2026 preparation strategies",
-      author: "Meera Nair",
-      authorInitials: "MN",
-      tags: ["Open Source", "Careers"],
-      replies: 7,
-      upvotes: 15,
-      time: "3 days ago",
-      upvoted: false
-    }
-  ]);
+  const [discussions, setDiscussions] = useState<Discussion[]>([]);
 
   const allTags = ["All", "Next.js", "System Design", "DevOps", "Announcements", "Open Source"];
 

@@ -19,63 +19,7 @@ export default function TeamFinder() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDomain, setSelectedDomain] = useState<string>("All");
 
-  const [members, setMembers] = useState<Member[]>([
-    {
-      id: 1,
-      name: "Aanya Sharma",
-      avatarInitials: "AS",
-      role: "Frontend Engineer",
-      domain: "Frontend",
-      skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
-      year: "2nd Year",
-      availability: "Looking for Group",
-      connected: false
-    },
-    {
-      id: 2,
-      name: "Rohan Patel",
-      avatarInitials: "RP",
-      role: "Backend Architect",
-      domain: "Backend",
-      skills: ["Node.js", "Express", "PostgreSQL", "Docker"],
-      year: "3rd Year",
-      availability: "Available",
-      connected: false
-    },
-    {
-      id: 3,
-      name: "Ishaan Verma",
-      avatarInitials: "IV",
-      role: "ML Researcher",
-      domain: "AI/ML",
-      skills: ["Python", "PyTorch", "Scikit-Learn", "FastAPI"],
-      year: "4th Year",
-      availability: "Available",
-      connected: true
-    },
-    {
-      id: 4,
-      name: "Kriti Sen",
-      avatarInitials: "KS",
-      role: "UI/UX Designer",
-      domain: "UI/UX",
-      skills: ["Figma", "Adobe XD", "Wireframing", "CSS"],
-      year: "1st Year",
-      availability: "Looking for Group",
-      connected: false
-    },
-    {
-      id: 5,
-      name: "Aditya Rao",
-      avatarInitials: "AR",
-      role: "Mobile App Developer",
-      domain: "Mobile",
-      skills: ["Flutter", "Dart", "Firebase", "GraphQL"],
-      year: "3rd Year",
-      availability: "Busy",
-      connected: false
-    }
-  ]);
+  const [members, setMembers] = useState<Member[]>([]);
 
   const domains = ["All", "Frontend", "Backend", "AI/ML", "UI/UX", "Mobile"];
 

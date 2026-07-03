@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Users, Calendar, AlertTriangle, ShieldCheck, Plus, Trash2, Shield, UserX, BarChart2, Lock } from "lucide-react";
+import Link from "next/link";
 import { useTheme } from "@/components/ThemeContext";
 
 interface UserProfile {
@@ -23,18 +24,9 @@ export default function AdminPanel() {
   const { role } = useTheme();
   const [activeTab, setActiveTab] = useState<"users" | "moderation" | "analytics">("users");
 
-  const [users, setUsers] = useState<UserProfile[]>([
-    { id: 1, name: "Mahesh Dubey", email: "mahesh@university.edu", role: "Member", status: "Active" },
-    { id: 2, name: "Rahul Krishnan", email: "rahul@university.edu", role: "Lead", status: "Active" },
-    { id: 3, name: "Aanya Sharma", email: "aanya@university.edu", role: "Member", status: "Pending" },
-    { id: 4, name: "Ishaan Verma", email: "ishaan@university.edu", role: "Admin", status: "Active" },
-    { id: 5, name: "Kriti Sen", email: "kriti@university.edu", role: "Member", status: "Suspended" }
-  ]);
+  const [users, setUsers] = useState<UserProfile[]>([]);
 
-  const [moderationQueue, setModerationQueue] = useState<ModerationPost[]>([
-    { id: 1, title: "Cheating on DSA homework shortcuts - leaked answers", flaggedBy: "Rohan Patel", reason: "Policy Violation" },
-    { id: 2, title: "Unrelated spam promotional link for essay writer bots", flaggedBy: "Aditi Rao", reason: "Spam Content" }
-  ]);
+  const [moderationQueue, setModerationQueue] = useState<ModerationPost[]>([]);
 
   const handleRoleChange = (id: number, newRole: UserProfile["role"]) => {
     setUsers(prev => prev.map(u => u.id === id ? { ...u, role: newRole } : u));
@@ -64,12 +56,13 @@ export default function AdminPanel() {
           The Admin Panel is only accessible to club administrators.
           If you think this is a mistake, please contact your club admin.
         </p>
-        <a
-          href="/"
-          className="mt-2 h-9 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-bold hover:opacity-95 transition-opacity flex items-center gap-1.5"
-        >
-          Back to Dashboard
-        </a>
+        <Link href="/" legacyBehavior>
+          <a
+            className="mt-2 h-9 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-bold hover:opacity-95 transition-opacity flex items-center gap-1.5"
+          >
+            Back to Dashboard
+          </a>
+        </Link>
       </div>
     );
   }

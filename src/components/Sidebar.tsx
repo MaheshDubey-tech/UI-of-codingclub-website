@@ -14,7 +14,8 @@ import {
   ShieldAlert,
   Terminal,
   Settings,
-  Sparkles
+  Sparkles,
+  CalendarDays
 } from "lucide-react";
 import { useTheme } from "@/components/ThemeContext";
 
@@ -24,6 +25,7 @@ const navItems = [
   { name: "Team Finder", href: "/team-finder", icon: Users },
   { name: "Resources", href: "/resources", icon: BookOpen },
   { name: "Discussions", href: "/discussions", icon: MessageSquare },
+  { name: "Events", href: "/events", icon: CalendarDays },
   { name: "Notifications", href: "/notifications", icon: Bell },
   { name: "Profile", href: "/profile", icon: User },
   { name: "Admin Panel", href: "/admin", icon: ShieldAlert },
