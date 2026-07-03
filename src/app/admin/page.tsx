@@ -56,12 +56,10 @@ export default function AdminPanel() {
           The Admin Panel is only accessible to club administrators.
           If you think this is a mistake, please contact your club admin.
         </p>
-        <Link href="/" legacyBehavior>
-          <a
-            className="mt-2 h-9 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-bold hover:opacity-95 transition-opacity flex items-center gap-1.5"
-          >
+        <Link href="/" className="mt-2 h-9 px-4 rounded-xl bg-primary text-primary-foreground text-xs font-bold hover:opacity-95 transition-opacity flex items-center gap-1.5">
+          
             Back to Dashboard
-          </a>
+          
         </Link>
       </div>
     );
